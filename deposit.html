@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deposit Saldo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(135deg, #1e3c72, #2a5298);
+      --card-bg: rgba(255, 255, 255, 0.1);
+      --border-glow: rgba(0, 191, 255, 0.4);
+      --accent: #00e5ff;
+      --white: #fff;
+      --green: #4caf50;
+      --green-hover: #43a047;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-gradient);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(15px);
+      border: 1px solid var(--border-glow);
+      border-radius: 20px;
+      padding: 30px 25px;
+      max-width: 430px;
+      width: 100%;
+      box-shadow: 0 0 30px rgba(0, 191, 255, 0.2);
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 12px;
+      border-radius: 12px;
+      border: none;
+      font-size: 16px;
+      margin-bottom: 20px;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: 600;
+      color: white;
+      background-color: var(--green);
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: var(--green-hover);
+    }
+
+    .rekening {
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 18px;
+      font-size: 14px;
+      line-height: 1.7;
+      margin-top: 25px;
+    }
+
+    .rekening b {
+      display: block;
+      margin-top: 10px;
+      color: var(--accent);
+    }
+
+    .wa-button {
+      display: block;
+      text-align: center;
+      margin-top: 25px;
+      background-color: #25d366;
+      padding: 12px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      color: white;
+      transition: background 0.3s;
+    }
+
+    .wa-button:hover {
+      background-color: #1ebe5c;
+    }
+
+    .back {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .back a {
+      color: #ccc;
+      text-decoration: underline;
+      font-size: 14px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  <script>
+    function goToNextPage(event) {
+      event.preventDefault();
+      const nominal = document.getElementById("jumlah").value;
+      if (nominal && parseInt(nominal) > 0) {
+        window.location.href = "konfirmasi.html";
+      } else {
+        alert("Masukkan jumlah deposit terlebih dahulu.");
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Deposit Saldo</h2>
+    <form onsubmit="goToNextPage(event)">
+      <label for="jumlah">Jumlah Deposit (Rp)</label>
+      <input type="number" id="jumlah" name="jumlah" placeholder="Contoh: 50000" required>
+      <button type="submit">Kirim Sekarang</button>
+    </form>
+
+    <div class="rekening">
+      <h3>Transfer ke Rekening:</h3>
+      <b>Neo Bank</b>
+      5859459294295448<br>
+      Atas nama: <i>Inisial (I)</i>
+
+      <b>Dana</b>
+      083199281338<br>
+      Atas nama: <i>Inisial (T)</i>
+    </div>
+
+    <a class="wa-button" href="https://wa.me/6281220659921?text=Halo%20Admin,%20saya%20sudah%20transfer%20deposit.%20Berikut%20bukti%20transfer%20saya:" target="_blank">
+      Kirim Bukti Transfer ke Admin
+    </a>
+
+    <div class="back">
+      <a href="index.html">← Kembali ke Beranda</a>
+    </div>
+  </div>
+
+</body>
+</html>

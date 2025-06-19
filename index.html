@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dompet Saya</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .image-top {
+      margin-bottom: 20px;
+    }
+
+    .image-top img {
+      width: 100px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+
+    .saldo-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+      text-align: center;
+      width: 100%;
+      max-width: 360px;
+    }
+
+    .saldo-box h2 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .saldo-box p {
+      font-size: 30px;
+      font-weight: bold;
+      margin: 10px 0 0;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 360px;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+      min-width: 120px;
+      text-align: center;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .btn-deposit {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .btn-deposit:hover {
+      background-color: #43a047;
+    }
+
+    .btn-tarik {
+      background-color: #f44336;
+      color: white;
+    }
+
+    .btn-tarik:hover {
+      background-color: #e53935;
+    }
+
+    .bottom-text {
+      margin-top: 30px;
+      padding: 0 10px;
+      text-align: center;
+      font-size: 14px;
+      opacity: 0.9;
+      max-width: 360px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Gambar -->
+  <div class="image-top">
+    <img src="https://cdn-icons-png.flaticon.com/512/584/584050.png" alt="Gambar Dompet">
+  </div>
+
+  <!-- Saldo -->
+  <div class="saldo-box">
+    <h2>Jumlah Saldo</h2>
+    <p>Rp 0</p>
+  </div>
+
+  <!-- Tombol -->
+  <div class="actions">
+    <a href="deposit.html" class="btn btn-deposit">Deposit</a>
+    <button class="btn btn-tarik">Penarikan</button>
+  </div>
+
+  <!-- Teks bawah -->
+  <div class="bottom-text">
+    <p>
+      AYO, cobalah bisnis baru ini adalah bisnis yang sangat menguntungkan bagi semua orang yang menggunakan fitur ini. 
+      Setiap kali anda melakukan deposit, maka jumlah deposit anda akan dikalikan 2. Contohnya anda deposit Rp100.000 
+      maka yang akan masuk ke saldo adalah Rp200.000 dan begitu pun seterusnya. Minimal penarikan adalah Rp1.000.000/minggu. 
+      Peringatan untuk kalian khususnya pengguna bisnis ini, jika mau share ke teman kalian silahkan hubungi CS yang mengundang 
+      anda ke bisnis ini agar diberikan link khusus pengguna baru. Dan jangan coba-coba membagikan link anda ke orang lain, 
+      jika tidak saldo anda akan diambil orang yang tidak bertanggung jawab.
+    </p>
+  </div>
+
+</body>
+</html>
